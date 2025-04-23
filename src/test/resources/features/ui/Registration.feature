@@ -2,9 +2,9 @@ Feature: User Registration
   As a new user
   I want to register with valid credentials
   So that I can access my account
-
-  Scenario Outline: Register a new user successfully
+  Background:
     Given the user is on the registration page
+  Scenario Outline: Register a new user successfully
     When the user enters valid registration details with username "<username>", password "<password>", confirm password "<confirmPassword>" and email "<email>"
     Then the user account is created successfully
 
