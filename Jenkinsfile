@@ -3,9 +3,9 @@ pipeline {
 
     tools {
         jdk 'JAVA_HOME'             // Make sure this matches the name in Jenkins JDK config
-        maven 'MAVEN_HOME'      // Make sure Maven is configured in Jenkins
+        maven 'MAVEN_HOME'          // Make sure Maven is configured in Jenkins
         git 'git'
-        allure 'Allure' // Name must match what you set above
+        allure 'Allure'             // Name must match what you set above
     }
 
     environment {
@@ -19,10 +19,17 @@ pipeline {
             }
         }
 
-        stage('Build and Test') {
+        stage('Build and Test - API') {
             steps {
-                bat 'echo "Running tests..."'
-                bat 'mvn clean test'
+                bat 'echo "Running API tests..."'
+                bat 'mvn clean test -Dtest="org.example.runners.ApiRunner"'  // Replace with your API test runner class
+            }
+        }
+
+        stage('Build and Test - UI') {
+            steps {
+                bat 'echo "Running UI tests..."'
+                bat 'mvn clean test -Dtest="org.example.runners.UiRunner"'  // Replace with your UI test runner class
             }
         }
 
