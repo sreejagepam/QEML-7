@@ -22,8 +22,8 @@ public class DriverManager {
                 driver.set(createDriver("firefox"));
                 break;
             case "edge":
-                System.setProperty("webdriver.edge.driver", "C:\\Program Files (x86)\\Microsoft\\Edge");
-                driver.set(createDriver("edge"));
+                System.setProperty("webdriver.edge.driver", "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\135.0.3179.85\\msedge.exe");
+                driver.set(new EdgeDriver());
                 break;
             default:
                 throw new IllegalArgumentException("Unsupported browser: " + browser);
