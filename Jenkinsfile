@@ -13,7 +13,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/sreejagepam/QEML-7.git' // replace with your repo if needed
+                git branch: 'main', url: 'https://github.com/sreejagepam/QEML-7.git' // replace with your repo if needed
             }
         }
 
