@@ -4,6 +4,7 @@ pipeline {
     tools {
         jdk 'JAVA_HOME'             // Make sure this matches the name in Jenkins JDK config
         maven 'MAVEN_HOME'      // Make sure Maven is configured in Jenkins
+        git 'git'
     }
 
     environment {
