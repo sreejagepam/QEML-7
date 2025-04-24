@@ -5,6 +5,7 @@ pipeline {
         jdk 'JAVA_HOME'             // Make sure this matches the name in Jenkins JDK config
         maven 'MAVEN_HOME'      // Make sure Maven is configured in Jenkins
         git 'git'
+        allure 'Allure' // Name must match what you set above
     }
 
     environment {
