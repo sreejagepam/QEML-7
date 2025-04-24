@@ -13,4 +13,7 @@ Feature: User Registration
       | username   | password       | confirmPassword | email                |
       | testuser1  | password123    | password123     | testuser1@example.com|
       | testuser2  | password456    | password456     | testuser2@example.com|
+<<<<<<< HEAD
       | testuser3  | password456    | password456     | testuser2@example.com|
+=======
+>>>>>>> b3aac23f0dbb3ea2b636f9c76324f438e11f72d4
