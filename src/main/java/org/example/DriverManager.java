@@ -22,6 +22,7 @@ public class DriverManager {
                 driver.set(createDriver("firefox"));
                 break;
             case "edge":
+                System.setProperty("webdriver.edge.driver", "C:\\Program Files (x86)\\Microsoft\\Edge");
                 driver.set(createDriver("edge"));
                 break;
             default:

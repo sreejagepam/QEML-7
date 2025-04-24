@@ -10,6 +10,7 @@ pipeline {
 
     environment {
         MAVEN_OPTS = "-Dmaven.test.failure.ignore=false"
+        EDGE_DRIVER_PATH = 'C:\\Program Files (x86)\\Microsoft\\Edge'
     }
 
     stages {
