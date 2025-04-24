@@ -20,6 +20,8 @@ pipeline {
 
         stage('Build and Test') {
             steps {
+                sh 'echo "Running tests..."'
+                sh 'ls -R'   // Show all files
                 sh 'mvn clean test'
             }
         }
