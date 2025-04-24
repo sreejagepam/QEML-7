@@ -21,7 +21,6 @@ pipeline {
         stage('Build and Test') {
             steps {
                 bat 'echo "Running tests..."'
-                bat 'ls -R'   // Show all files
                 bat 'mvn clean test'
             }
         }
